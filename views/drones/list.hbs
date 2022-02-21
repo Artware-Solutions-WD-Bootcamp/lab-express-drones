@@ -1,18 +1,16 @@
 <div class="d-flex flex-column">
-  
   <h2>Available drones</h2>
   <div  class="d-flex flex-row justify-content-evenly flex-wrap">
-  {{#each allDrones}}
-  <div style="width: 18rem"  class="d-flex flex-column ">
-    
-    {{!-- Bonus extra: poner imag.  --}}
-  {{!-- <img src="..." class="card-img-top" alt="..."> --}}
-    <h5 class="card-title">Name: {{this.name}}</h5>
-    
-    <p class="card-text"> Propellers: {{this.propellers}} <br>  Max. Speed {{this.maxSpeed}}</p>
-    <a href="/drones/{{this._id}}/edit" class="btn btn-primary"> Edit drone</a>
+    {{#each allDrones}}
+      <div class="card" style="width: 18rem;">
+        <img src="/public/images/{{this._id}}.jpg" class="card-img-top" alt="{{this.name}} image">
+        <div class="card-body">
+          <h5 class="card-title">Name: {{this.name}}</h5>
+          <p class="card-text">Propellers: {{this.propellers}}<br>
+              Max. Speed {{this.maxSpeed}}</p></p>
+          <a href="/drones/{{this._id}}/edit" class="btn btn-primary">Edit drone</a>
+        </div>
+      </div>
+    {{/each}}
   </div>
-  {{/each}}
-  </div>
-  </div>
-
+</div>

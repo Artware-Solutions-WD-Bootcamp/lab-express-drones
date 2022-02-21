@@ -1,24 +1,25 @@
-<div>
-<h2>Update the drone</h2>
-<div>
-        <form method="post" action="/drones/{{thisDrone._id}}/edit" >
-        
-        <label for="name">Name: </label>
-        <input type="text" name="name" value="{{thisDrone.name}}">
-      
-        <label for="propellers" > Propellers: </label>
-        <input type="text" name="propellers" value="{{thisDrone.propellers}}">
-        
-        
-        <label for="maxSpeed">Max. Speed: </label>
-        <input type="text" name="maxSpeed" value="{{thisDrone.maxSpeed}}">
-
-        <button >Update drone</button>
-        </form>
-    
-        <form method="post" action="/drones/{{thisDrone._id}}/delete" >
-        <button >Delete drone</button>
-        </form>
-    
+<div class="card col-md-6 col-xl-3">
+  <div class="card-body">
+    <h5 class="card-title">Update drone {{thisDrone.name}}</h5>
+    <form method="post" action="/drones/{{thisDrone._id}}/edit" >
+        <div class="form-field-set">
+            <label for="name">Name: </label>
+            <input class="form-control" type="text" name="name" value="{{thisDrone.name}}">
+        </div>
+        <div class="form-field-set">
+            <label for="propellers" > Propellers: </label>
+            <input class="form-control" type="text" name="propellers" value="{{thisDrone.propellers}}">
+        </div>
+        <div class="form-field-set">
+            <label for="maxSpeed">Max. Speed: </label>
+            <input class="form-control" type="text" name="maxSpeed" value="{{thisDrone.maxSpeed}}">
+        </div>
+        <div class="buttons">
+        <a href="#" class="card-link"><button class="btn btn-warning">Update drone</button></a>
+    </form>
+    <form method="post" action="/drones/{{thisDrone._id}}/delete" >
+        <a href="#" class="card-link"><button class="btn btn-danger">Delete drone</button></a>
+    </form>
     </div>
+  </div>
 </div>

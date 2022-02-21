@@ -6,3 +6,19 @@ body {
 a {
   color: #00b7ff;
 }
+
+.btn{
+  padding: 20px 30px;
+  margin: 20px 20px 0px 0px;
+}
+
+.card{
+  padding: 15px;
+}
+.form-field-set{
+  margin-top: 20px;
+}
+
+.buttons{
+  display: inline-flex;
+}

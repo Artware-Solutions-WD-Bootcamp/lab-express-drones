@@ -31,6 +31,13 @@ app.use('/', index);
 const droneRoutes = require('./routes/drones')
 app.use('/', droneRoutes)
 
+//? global package used to `normalize` paths amongst different operating systems
+// https://www.npmjs.com/package/path
+const path = require("path");
+
+//? path to use images
+app.use(express.static(path.join(__dirname, "..", "public", "images")));
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);
 
