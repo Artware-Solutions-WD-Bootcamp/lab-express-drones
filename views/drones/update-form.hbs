@@ -14,8 +14,11 @@
         <input type="text" name="maxSpeed" value="{{thisDrone.maxSpeed}}">
 
         <button >Update drone</button>
-
-        
         </form>
+    
+        <form method="post" action="/drones/{{thisDrone._id}}/delete" >
+        <button >Delete drone</button>
+        </form>
+    
     </div>
 </div>
