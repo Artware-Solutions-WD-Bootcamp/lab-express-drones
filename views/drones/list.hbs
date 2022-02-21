@@ -3,6 +3,7 @@
   <div>
   {{#each allDrones}}
     <div>Name: {{this.name}} => Propellers: {{this.propellers}} => Max. Speed {{this.maxSpeed}}</div>
+    <a href="/drones/{{this._id}}/edit"> Edit drone</a>
   {{/each}}
   </div>
 </div>
